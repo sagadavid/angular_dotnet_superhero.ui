@@ -1,6 +1,6 @@
 export class SuperHero {
   id?: number;
-  name = '';
+  nick = '';
   firstName = '';
   lastName = '';
   place = '';

@@ -12,8 +12,13 @@ export class AppComponent {
   heroes: SuperHero[] = [];
 
   constructor(private superHeroService: SuperheroService) {}
+  // ngOnInit(): void {
+  //   this.heroes = this.superHeroService.getSuperHeroes();
+  //   console.log(this.heroes);
+
   ngOnInit(): void {
-    this.heroes = this.superHeroService.getSuperHeroes();
-    console.log(this.heroes);
+    this.superHeroService
+      .getSuperHeroes()
+      .subscribe((result: SuperHero[]) => (this.heroes = result));
   }
 }

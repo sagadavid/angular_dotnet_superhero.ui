@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment.development';
   providedIn: 'root',
 })
 export class SuperheroService {
+  //crud operations summoned under services
   private url = 'SuperHero'; //api controllers name here
   constructor(private http: HttpClient) {}
 
